@@ -1,0 +1,28 @@
+@import "~/styles/global"
+
+.main
+	
+	use-flex column
+	use-flex-center()
+	size 100% 100vh
+	
+	
+	.title-area
+		
+		use-flex column
+		use-flex-center()
+		
+		.logo
+			width 40em
+		
+		.title
+			font-jac-bas-9()
+			color #056b8d
+			+dark-mode()
+				color #adcee8
+			font-size 2.3em
+		
+		span + span
+			margin-block-start 1em
+		
+	

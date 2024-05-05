@@ -1,0 +1,24 @@
+html, body
+	
+	size 100%
+	clear-pad()
+	
+	// for breaking collapsing margin
+	overflow auto
+	
+
+body
+	
+	background #f6f8fa
+	color #3a3a3a
+	+dark-mode()
+		background #1d1d1d
+		color #f6f8fa
+	
+	font-size 14px
+	
+
+::selection
+	background-color #3a3a3a20
+	+dark-mode()
+		background-color #f6f8fa20

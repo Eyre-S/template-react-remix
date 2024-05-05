@@ -7,6 +7,13 @@ import path from "node:path";
 
 installGlobals();
 
+const stylusMixins = `
+@import "${path.resolve(__dirname,'./app/styles/mixins')}"
+`
+const stylusConfig = {
+	additionalData: stylusMixins
+}
+
 export default defineConfig({
 	
 	plugins: [
@@ -27,6 +34,10 @@ export default defineConfig({
 		}
 	},
 	css: {
+		preprocessorOptions: {
+			stylus: stylusConfig,
+			styl: stylusConfig
+		},
 		modules: {
 			localsConvention: "camelCase"
 		}

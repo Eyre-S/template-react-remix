@@ -1,0 +1,67 @@
+// public functions/mixins available in the whole project
+
+dark-mode()
+	// css on native dark mode
+	@media (prefers-color-scheme: dark)
+		{block}
+
+size(args...)
+	width args[0]
+	if length(args) > 1
+		height args[1]
+	else
+		height args[0]
+
+clear-pad()
+	margin 0
+	padding 0
+	border none
+	outline none
+
+use-flex(direction)
+	display flex
+	flex-direction direction
+
+use-flex-center()
+	align-items center
+	justify-content center
+
+pos(args...)
+	if length(args) == 1
+		top args[0]
+		right args[0]
+		bottom args[0]
+		left args[0]
+	else if length(args) == 2
+		top args[0]
+		right args[1]
+		bottom args[0]
+		left args[1]
+	else if length(args) == 3
+		top args[0]
+		right args[1]
+		bottom args[2]
+		left args[1]
+	else
+		top args[0]
+		right args[1]
+		bottom args[2]
+		left args[3]
+
+font-grayscale()
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+
+font-normalize()
+	color inherit
+	font-size inherit
+	font-weight inherit
+	font-family inherit
+	line-height inherit
+	word-spacing inherit
+	letter-spacing inherit
+	text-decoration inherit
+	// text-transform inherit
+	// text-align inherit
+	// vertical-align inherit
+	// white-space inherit
